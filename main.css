@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #c0392b;
+    --secondary-color: #e74c3c;
+    --tertiary-color:#2c3e50;
+    --accent-color: #34495e;
+    --ligth-color: #ecf0f1;
+    --concrete-color: #7f8c8d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--tertiary-color);
+    color: var(--ligth-color);
+}
+
+.title {
+    text-align: center;
+}
+
+.title span {
+    color: var(--primary-color);
+}
+
+.content-wrapper {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+    background-color: var(--accent-color);
+}
+
+.contact-form {
+    padding: 1em;
+}
+
+.contact-form form {
+    padding-left: .5em;
+}
+
+.contact-form form p > * {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.contact-form form input, .contact-form form textarea {
+    border-bottom: 1px solid var(--secondary-color);
+    padding-top: .5em;
+    color: var(--ligth-color);
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.contact-form form button {
+    background-color: var(--primary-color);
+    color: var(--ligth-color);
+    text-transform: uppercase;
+    padding: .8em;
+    cursor: pointer;
+}
+
+.contact-form form button:hover {
+    background-color: var(--secondary-color);
+    transition: all 1s ease-out;
+}
+
+
+
+
+/* contact info */
+
+.contact-info {
+    background-color: var(--tertiary-color);
+    padding: 1em;
+    text-align: center;
+}
+
+.contact-info ul {
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info ul li {
+    list-style: none;
+}
+
+
+@media (min-width:750px){
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .contact-form form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+
+    .contact-form form .block {
+        grid-column: 1/3;
+    }
+
+
+    .contact-info > * {
+        text-align: left;
+        padding-top: .5em;
+    }
+
+    .contact-info p, .contact-info ul {
+        padding-left: .5em;
+    }
+}
